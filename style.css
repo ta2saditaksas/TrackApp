@@ -1,0 +1,49 @@
+:root {
+  --bg: #f7f7f5; --card: #fff; --text: #1f1f1f;
+  --muted: #6b6b6b; --border: #e2e2de; --accent: #2563eb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161616; --card: #212121; --text: #ececec;
+    --muted: #a0a0a0; --border: #333; --accent: #3b82f6;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+main { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+h1 { margin: 0 0 1.5rem; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+.stat { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.stat span { display: block; font-size: 13px; color: var(--muted); }
+.stat strong { font-size: 26px; }
+.stat.alerte strong { color: #d97706; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 12px; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+
+input, select, button, .btn {
+  font: inherit; font-size: 14px; padding: 8px 10px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--card); color: var(--text);
+}
+button, .btn { cursor: pointer; }
+label.btn { display: inline-block; }
+button[type="submit"] { margin-top: 12px; background: var(--accent); color: #fff; border: none; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.spacer { flex: 1; }
+
+#liste { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.item {
+  background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; display: flex; justify-content: space-between;
+  align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.item h3 { margin: 0; font-size: 16px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.meta { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
+.meta a { color: var(--accent); }
+.badge { font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 6px; }
+.actions { display: flex; gap: 6px; }
+.vide { color: var(--muted); }
