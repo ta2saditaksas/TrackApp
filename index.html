@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traqueur de candidatures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Mes candidatures</h1>
+
+    <section class="stats">
+      <div class="stat"><span>Envoyées</span><strong id="s-total">0</strong></div>
+      <div class="stat"><span>En cours</span><strong id="s-encours">0</strong></div>
+      <div class="stat"><span>Entretiens</span><strong id="s-entretiens">0</strong></div>
+      <div class="stat alerte"><span>À relancer</span><strong id="s-relance">0</strong></div>
+    </section>
+
+    <form id="form" class="card">
+      <div class="grid">
+        <label>Entreprise <input id="ent" required placeholder="Doctolib"></label>
+        <label>Poste <input id="pos" required placeholder="Développeur back-end"></label>
+        <label>Type
+          <select id="type"><option>Stage</option><option>Alternance</option></select>
+        </label>
+        <label>Date d'envoi <input id="date" type="date"></label>
+        <label>Source <input id="src"></label>
+        <label>Lien de l'offre <input id="lien" type="url" placeholder="https://..."></label>
+      </div>
+      <label>Notes <input id="note" placeholder="Stack Python/Django, contact RH : Julie"></label>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <div class="toolbar">
+      <select id="f-statut"><option value="">Tous les statuts</option></select>
+      <select id="f-type">
+        <option value="">Stage et alternance</option>
