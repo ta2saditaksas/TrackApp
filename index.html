@@ -35,4 +35,16 @@
     <div class="toolbar">
       <select id="f-statut"><option value="">Tous les statuts</option></select>
       <select id="f-type">
-        <option value="">Stage et alternance</option>
+        <option>Stage</option><option>Alternance</option>
+      </select>
+      <input id="recherche" placeholder="Rechercher une entreprise...">
+      <span class="spacer"></span>
+      <label class="btn">Importer CSV <input type="file" id="import" accept=".csv" hidden></label>
+      <button id="export" type="button">Exporter CSV</button>
+    </div>
+
+    <ul id="liste"></ul>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
